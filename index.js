@@ -3,7 +3,7 @@ const _ = require('lodash');
 
 const untappdClient = new UntappdClient('', '');
 
-untappdClient.getUserInfo({username: 'cluebat'})
+untappdClient.getUserInfo()
 .then((result) => {
   const response = JSON.parse(_.get(result, 'body', ''));
   console.log(_.get(response, 'response', {}));
